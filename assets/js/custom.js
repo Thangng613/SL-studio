@@ -208,12 +208,7 @@ $(document).ready(function () {
   ];
   
   const allImagesBeauty = [
-    "assets/images/concept/beauty/b1.png",
-    "assets/images/concept/beauty/b2.png",
-    "assets/images/concept/beauty/b3.png",
-    "assets/images/concept/beauty/b4.png",
-    "assets/images/concept/beauty/b5.png",
-    "assets/images/concept/beauty/b6.png",
+    
   ];
   
   const allImagesKyyeu = [
@@ -283,6 +278,7 @@ $(document).ready(function () {
     "assets/images/concept/nangtho/nt15.png",
     "assets/images/concept/nangtho/nt16.png",
     "assets/images/concept/nangtho/nt17.png",
+    "assets/images/concept/beauty/b2.png",
     "assets/images/concept/nangtho/nt18.jpg",
     "assets/images/concept/nangtho/nt19.png",
     "assets/images/concept/nangtho/nt20.png",
@@ -291,9 +287,11 @@ $(document).ready(function () {
     "assets/images/concept/nangtho/nt23.png",
     "assets/images/concept/nangtho/nt24.png",
     "assets/images/concept/nangtho/nt25.png",
+    "assets/images/concept/beauty/b4.png",
     "assets/images/concept/nangtho/nt26.png",
     "assets/images/concept/nangtho/nt27.png",
     "assets/images/concept/nangtho/nt28.png",
+    "assets/images/concept/beauty/b3.png",
     "assets/images/concept/nangtho/nt29.png",
     "assets/images/concept/nangtho/nt30.png",
     "assets/images/concept/nangtho/nt31.png",
@@ -302,12 +300,15 @@ $(document).ready(function () {
     "assets/images/concept/nangtho/nt34.png",
     "assets/images/concept/nangtho/nt35.png",
     "assets/images/concept/nangtho/nt36.png",
+    "assets/images/concept/beauty/b1.png",
     "assets/images/concept/nangtho/nt37.png",
     "assets/images/concept/nangtho/nt38.png",
     "assets/images/concept/nangtho/nt39.png",
+    "assets/images/concept/beauty/b6.png",
     "assets/images/concept/nangtho/nt40.png",
     "assets/images/concept/nangtho/nt41.png",
     "assets/images/concept/nangtho/nt42.png",
+    "assets/images/concept/beauty/b5.png",
   
   ];
   
