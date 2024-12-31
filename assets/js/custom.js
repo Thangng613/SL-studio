@@ -16,16 +16,16 @@ $(document).ready(function () {
       date
     };
   
-    fetch("/register", {
+    fetch("/.netlify/functions/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.error("Error:", error));
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error("Error:", error));
   });
 
   /*==================================
@@ -401,7 +401,18 @@ $(document).ready(function () {
   
   
   // Close modal when clicking close button
- 
+  const closeButton = document.querySelector(".modal .close");
+  closeButton.addEventListener("click", () => {
+    document.getElementById("image-modal").style.display = "none";
+  });
+  
+  // Close modal when clicking outside of the image
+  window.addEventListener("click", (event) => {
+    const modal = document.getElementById("image-modal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 
 });
 
@@ -411,15 +422,3 @@ $(document).ready(function () {
 //load more
 
 // Data for all images
-const closeButton = document.querySelector(".modal .close");
-closeButton.addEventListener("click", () => {
-  document.getElementById("image-modal").style.display = "none";
-});
-
-// Close modal when clicking outside of the image
-window.addEventListener("click", (event) => {
-  const modal = document.getElementById("image-modal");
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-});
