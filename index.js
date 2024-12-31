@@ -3,9 +3,9 @@ const bodyParser = require('body-parser');
 const { google } = require('googleapis');
 const cors = require('cors'); // Thêm thư viện cors
 
-// Kích hoạt CORS
 const app = express();
-// app.use(cors());
+// Kích hoạt CORS
+app.use(cors({ origin: '*' }));
 app.use(bodyParser.json());
 
 // Đường dẫn đến file JSON của Service Account
@@ -28,15 +28,16 @@ async function appendToGoogleSheet(data) {
 
     await sheets.spreadsheets.values.append({
         spreadsheetId: SPREADSHEET_ID,
-        range: `${SHEET_NAME}!A1`, // Vị trí thêm dữ liệu
+        range: `${SHEET_NAME}!A:Z`, // Vị trí thêm dữ liệu
         valueInputOption: 'USER_ENTERED',
         resource,
     });
 }
 
 app.post('/register', async (req, res) => {
+    console.log("🚀 ~ req.body:", req.body); // Kiểm tra dữ liệu nhận được
     const { concept, fullName, date, phone } = req.body;
-
+    console.log("🚀 ~ concept, fullName, date, phone:", concept, fullName, date, phone);
     try {
         await appendToGoogleSheet({ concept, fullName, date, phone });
         res.status(200).send({ message: 'Data added to Google Sheet successfully!' });
@@ -45,6 +46,7 @@ app.post('/register', async (req, res) => {
         res.status(500).send({ message: 'Failed to add data to Google Sheet' });
     }
 });
+
 
 app.listen(3000, () => {
     console.log('Server running on http://localhost:3000');
