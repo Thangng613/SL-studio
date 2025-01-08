@@ -181,25 +181,24 @@ $(document).ready(function () {
   });
 
   const allImagesTets = [
-    "assets/imagess/concept/tetnc/1.png",
+    "assets/imagess/concept/tetnc/1.jpg",
     "assets/imagess/concept/tetnc/2.jpg",
     "assets/imagess/concept/tetnc/3.jpg",
-    "assets/imagess/concept/tetnc/4.png",
-    "assets/imagess/concept/tetnc/5.png",
-    "assets/imagess/concept/tetnc/6.png",
+    "assets/imagess/concept/tetnc/4.jpg",
+    "assets/imagess/concept/tetnc/5.jpg",
+    "assets/imagess/concept/tetnc/6.jpg",
     "assets/imagess/concept/tetnc/7.jpg",
     "assets/imagess/concept/tetnc/8.jpg",
-    "assets/imagess/concept/tetnc/9.png",
-    "assets/imagess/concept/tetnc/10.png",
+    "assets/imagess/concept/tetnc/9.jpg",
+    "assets/imagess/concept/tetnc/10.jpg",
     "assets/imagess/concept/tetnc/11.jpg",
     "assets/imagess/concept/tetnc/12.jpg",
     "assets/imagess/concept/tetnc/13.jpg",
     "assets/imagess/concept/tetnc/14.jpg",
     "assets/imagess/concept/tetnc/15.jpg",
-    "assets/imagess/concept/tetnc/16.png",
-    "assets/imagess/concept/tetnc/17.png",
-    "assets/imagess/concept/tetnc/18.png",
-    "assets/imagess/concept/tetnc/19.png",
+    "assets/imagess/concept/tetnc/16.jpg",
+    "assets/imagess/concept/tetnc/17.jpg",
+    "assets/imagess/concept/tetnc/18.jpg",
   ];
 
   const allImagesCouple = [
