@@ -73,7 +73,6 @@ h6 {
   text-transform: capitalize;
 }
 
-
 p {
   margin: 0;
   color: #818998;
@@ -271,7 +270,7 @@ nav.navbar.bootsnav .navbar-toggle i {
 --------------------------------------*/
 .welcome-hero {
   position: relative;
-  background: url(../images/welcome-hero/welcome-banner.png) no-repeat;
+  background: url(../imagess/welcome-hero/banner-pc.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   z-index: 1;
@@ -902,35 +901,34 @@ register
 custom
 */
 
-
 .photo-gallery {
-    column-count: 6; /* Số cột */
-    column-gap: 16px; /* Khoảng cách giữa các cột */
-    padding: 20px;
-  }
-  
-  .gallery-item {
-    break-inside: avoid; /* Giữ hình ảnh không bị cắt */
-    margin-bottom: 16px; /* Khoảng cách giữa các ảnh theo chiều dọc */
-    overflow: hidden;
-    border-radius: 8px; /* Tạo bo góc */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
-    background-color: #fff;
-  }
-  
-  .gallery-item img {
-    width: 100%;
-    height: auto;
-    max-width: 600px;
-    max-height: 900px;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .gallery-item:hover img {
-    transform: scale(1.05); /* Phóng to nhẹ khi hover */
-  }
+  column-count: 6; /* Số cột */
+  column-gap: 16px; /* Khoảng cách giữa các cột */
+  padding: 20px;
+}
+
+.gallery-item {
+  break-inside: avoid; /* Giữ hình ảnh không bị cắt */
+  margin-bottom: 16px; /* Khoảng cách giữa các ảnh theo chiều dọc */
+  overflow: hidden;
+  border-radius: 8px; /* Tạo bo góc */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+  background-color: #fff;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  max-height: 900px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
 
 /* Modal */
 .modal {
@@ -1081,4 +1079,9 @@ custom
 /* Phone button styling */
 .phone-button {
   background-color: #25d366; /* Call green */
+}
+
+.loading {
+  background: grey;
+  cursor: wait;
 }

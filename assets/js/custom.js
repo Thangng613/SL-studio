@@ -1,32 +1,53 @@
 $(document).ready(function () {
   "use strict";
 
-  // document.getElementById("registerBtn").addEventListener("click", function () {
-  //   // Lấy dữ liệu từ các trường
-  //   const concept = document.querySelector("select").value;
-  //   const fullName = document.querySelector('input[name="fullName"]').value;
-  //   const phone = document.querySelector('input[name="phone"]').value;
-  //   const date = document.querySelector('input[name="date"]').value;
+  document.getElementById("registerBtn").addEventListener("click", function () {
+    // Lấy dữ liệu từ các trường
+    const concept = document.querySelector("select").value;
+    const fullName = document.querySelector('input[name="fullName"]').value;
+    const phone = document.querySelector('input[name="phone"]').value;
+    const date = document.querySelector('input[name="date"]').value;
 
-  //   // Gửi dữ liệu tới server
-  //   const data = {
-  //     concept,
-  //     fullName,
-  //     phone,
-  //     date
-  //   };
-
-  //   fetch("/.netlify/functions/register", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(data),
-  //   })
-  //   .then((response) => response.json())
-  //   .then((data) => console.log(data))
-  //   .catch((error) => console.error("Error:", error));
-  // });
+    // Gửi dữ liệu tới server
+    const data = {
+      concept,
+      fullName,
+      phone,
+      date,
+    };
+    const loading = document.getElementById("registerBtn");
+    if (!concept || !fullName || !phone || !date) {
+      alert("Vui lòng điền đầy đủ thông tin!");
+      return;
+    } else {
+      try {
+        loading.classList.add("loading");
+        fetch("https://sl-studio-be.onrender.com/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => {
+            response.json();
+          })
+          .then((data) => {
+            console.log(data);
+            alert("Đăng ký thành công!");
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert("Đã xảy ra lỗi! Vui lòng thử lại");
+          })
+          .finally(() => {
+            loading.classList.remove("loading"); // Remove loading state in all cases
+          });
+      } catch (error) {
+        alert("Đã xảy ra lỗi! Vui lòng thử lại");
+      }
+    }
+  });
 
   /*==================================
 * Author        : "ThemeSine"
@@ -158,6 +179,28 @@ $(document).ready(function () {
   $(".stop").on("click", function () {
     owl.trigger("stop.owl.autoplay");
   });
+
+  const allImagesTets = [
+    "assets/imagess/concept/tetnc/1.png",
+    "assets/imagess/concept/tetnc/2.jpg",
+    "assets/imagess/concept/tetnc/3.jpg",
+    "assets/imagess/concept/tetnc/4.png",
+    "assets/imagess/concept/tetnc/5.png",
+    "assets/imagess/concept/tetnc/6.png",
+    "assets/imagess/concept/tetnc/7.jpg",
+    "assets/imagess/concept/tetnc/8.jpg",
+    "assets/imagess/concept/tetnc/9.png",
+    "assets/imagess/concept/tetnc/10.png",
+    "assets/imagess/concept/tetnc/11.jpg",
+    "assets/imagess/concept/tetnc/12.jpg",
+    "assets/imagess/concept/tetnc/13.jpg",
+    "assets/imagess/concept/tetnc/14.jpg",
+    "assets/imagess/concept/tetnc/15.jpg",
+    "assets/imagess/concept/tetnc/16.png",
+    "assets/imagess/concept/tetnc/17.png",
+    "assets/imagess/concept/tetnc/18.png",
+    "assets/imagess/concept/tetnc/19.png",
+  ];
 
   const allImagesCouple = [
     "assets/imagess/concept/couple/c1.jpg",
@@ -309,8 +352,8 @@ $(document).ready(function () {
   // let currentIndex = 0;
 
   // Reference to the car list container
-  const tetnc = document.getElementById("photo-gallery-tet-nc");
-  const tetstu = document.getElementById("photo-gallery-tet-stu");
+  const tetnc = document.getElementById("photo-gallery-tet");
+  // const tetstu = document.getElementById("photo-gallery-tet-stu");
   const sinhnhat = document.getElementById("photo-gallery-sinhnhat");
   const couple = document.getElementById("photo-gallery-couple");
   const profile = document.getElementById("photo-gallery-profile");
@@ -339,8 +382,8 @@ $(document).ready(function () {
   }
 
   // Sử dụng lại
-  createImageFragment(allImagesTetnc, tetnc);
-  createImageFragment(allImagesTetStu, tetstu);
+  createImageFragment(allImagesTets, tetnc);
+  // createImageFragment(allImagesTetS, tetstu);
   createImageFragment(allImagesSN, sinhnhat);
   createImageFragment(allImagesCouple, couple);
   createImageFragment(allImagesProfile, profile);
@@ -392,8 +435,8 @@ document.addEventListener("click", function (event) {
 
 const closeDropdown = document.querySelector(".close-dropdown");
 closeDropdown.addEventListener("click", () => {
-  console.log('1aadd');
-  
+  console.log("1aadd");
+
   document.getElementById("dropdown-menu-custom").style.display = "none";
 });
 

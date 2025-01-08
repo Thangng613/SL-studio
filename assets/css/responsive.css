@@ -1,6 +1,9 @@
 @media screen and (max-width: 1680px) {
 } /*max-width:1680px*/
 @media screen and (max-width: 1440px) {
+  .welcome-hero {
+    background-image: url(../imagess/welcome-hero/banner-tab.jpg);
+  }
   .welcome-hero-txt {
     padding: 268px 0px 122px;
   }
@@ -76,6 +79,9 @@
 } /*max-width:768px*/
 
 @media screen and (max-width: 767px) {
+  /* nav {
+    background-color: rgba(0, 0, 0, 0.26) !important;
+  } */
   .single-service-item {
     max-width: 350px;
     margin: 30px auto;
@@ -113,6 +119,9 @@
 } /*max-width:540px*/
 
 @media screen and (max-width: 480px) {
+  .welcome-hero {
+    background-image: url(../imagess/welcome-hero/banner-dt.jpg);
+  }
   .welcome-hero h2 {
     font-size: 30px;
   }
@@ -126,7 +135,7 @@
     font-size: 24px;
     line-height: 1.5;
   }
-   .nav {
+  .nav {
     display: flex;
     flex-direction: column;
   }
