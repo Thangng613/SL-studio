@@ -10,7 +10,6 @@
   .model-search-content {
     position: relative;
     bottom: 0;
-    top: 100px;
   }
 } /*max-width:1440px*/
 
@@ -37,7 +36,7 @@
     padding-bottom: 30px;
   }
   nav.navbar.bootsnav {
-    background-color: #000;
+    background: rgba(255, 255, 255, 0.1);
   }
   .wrap-sticky nav.navbar.bootsnav.sticked ul.nav > li > a {
     padding: 18px 0px;

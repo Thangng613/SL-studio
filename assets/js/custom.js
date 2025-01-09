@@ -199,6 +199,9 @@ $(document).ready(function () {
     "assets/imagess/concept/tetnc/16.jpg",
     "assets/imagess/concept/tetnc/17.jpg",
     "assets/imagess/concept/tetnc/18.jpg",
+    "assets/imagess/concept/tetnc/19.jpg",
+    "assets/imagess/concept/tetnc/20.jpg",
+    "assets/imagess/concept/tetnc/21.jpg",
   ];
 
   const allImagesCouple = [
