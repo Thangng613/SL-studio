@@ -105,6 +105,15 @@
 } /*max-width:660px*/
 
 @media screen and (max-width: 640px) {
+  .img-discound {
+    display: none;
+  }
+  /* .voucher .row {
+    background-image: url("../imagess/newConcept/15.jpg");
+    position: relative;
+    top: 10;
+    right: 10;
+  } */
   .single-testimonial-box {
     max-width: 350px;
     margin: 0 auto;
@@ -200,4 +209,14 @@
   .img-register {
     display: none;
   }
+}
+
+.footer-top .f-inf {
+  color: #0a0a0a;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.footer-top i {
+  color: rgb(70, 64, 64);
 }

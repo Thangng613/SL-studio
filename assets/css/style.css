@@ -716,7 +716,7 @@ register
 --------------------------------------*/
 
 .contact {
-  background: rgba(42, 45, 84, 0.6);
+  background: #f0f0f0;
 }
 
 /* .contact{
@@ -744,7 +744,7 @@ register
 .footer-logo a:hover,
 .footer-logo a:focus {
   display: inline-block;
-  color: #fff;
+  color: #000;
   font-size: 24px;
   letter-spacing: 3px;
   font-family: "Rufina", serif;
@@ -1043,6 +1043,7 @@ custom
   gap: 10px;
   z-index: 1000;
 }
+
 .floating-buttons a {
   display: flex;
 }
@@ -1068,12 +1069,12 @@ custom
 
 /* Facebook button styling */
 .fb-button {
-  background-color: #1877f2; /* Facebook blue */
+  background-color: #539dff; /* Facebook blue */
 }
 
 /* Zalo button styling */
 .zalo-button {
-  background-color: #0084ff; /* Zalo blue */
+  background-color: #539dff; /* Zalo blue */
 }
 
 /* Phone button styling */
@@ -1095,10 +1096,11 @@ custom
   margin-top: 2px;
 }
 
-.info-studio a {
+.info-studio .f-inf {
   font-size: 16px;
   font-weight: 300;
   text-transform: none;
+  margin: 0;
 }
 
 /* Loading */
@@ -1128,4 +1130,14 @@ custom
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* voucher */
+.voucher p,
+h3 {
+  color: #332d2d;
+}
+
+.voucher .row {
+  padding: 96px 0;
 }
