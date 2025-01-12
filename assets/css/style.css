@@ -736,7 +736,7 @@ register
     background: rgba(42,45,84,.60);
 } */
 .footer-top {
-  padding: 112px 0 72px;
+  padding: 76px 0;
 }
 
 /*.footer-logo*/
@@ -814,8 +814,7 @@ register
 /*hm-foot-email*/
 /*.footer-copyright */
 .footer-copyright {
-  padding: 20px 0 17px;
-  border-top: 1px solid #434859;
+  padding: 20px 0;
 }
 .footer-copyright p,
 .footer-copyright p a {
