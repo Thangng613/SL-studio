@@ -4,24 +4,24 @@ $(document).ready(function () {
   document.getElementById("registerBtn").addEventListener("click", function () {
     // Lấy dữ liệu từ các trường
     const concept = document.querySelector("select").value;
-    const fullName = document.querySelector('input[name="fullName"]').value;
+    const fullname = document.querySelector('input[name="fullname"]').value;
     const phone = document.querySelector('input[name="phone"]').value;
-    const date = document.querySelector('input[name="date"]').value;
+    const time = document.querySelector('input[name="time"]').value;
 
     // Gửi dữ liệu tới server
     const data = {
       concept,
-      fullName,
+      fullname,
       phone,
-      date,
+      time,
     };
-    const loading = document.getElementById("registerBtn");
-    if (!concept || !fullName || !phone || !date) {
+    const loadingOverlay = document.getElementById("loading-overlay");
+    if (!concept || !fullname || !phone || !time) {
       alert("Vui lòng điền đầy đủ thông tin!");
       return;
     } else {
       try {
-        loading.classList.add("loading");
+        loadingOverlay.style.display = "flex";
         fetch("https://sl-studio-be.onrender.com/register", {
           method: "POST",
           headers: {
@@ -33,15 +33,12 @@ $(document).ready(function () {
             response.json();
           })
           .then((data) => {
-            console.log(data);
+            loadingOverlay.style.display = "none";
             alert("Đăng ký thành công!");
           })
           .catch((error) => {
             console.error("Error:", error);
             alert("Đã xảy ra lỗi! Vui lòng thử lại");
-          })
-          .finally(() => {
-            loading.classList.remove("loading"); // Remove loading state in all cases
           });
       } catch (error) {
         alert("Đã xảy ra lỗi! Vui lòng thử lại");
@@ -181,7 +178,7 @@ $(document).ready(function () {
   });
 
   const allImagesTets = [
-    "assets/imagess/concept/tetnc/1.jpg",
+    "assets/imagess/concept/tetnc/24.jpg",
     "assets/imagess/concept/tetnc/2.jpg",
     "assets/imagess/concept/tetnc/3.jpg",
     "assets/imagess/concept/tetnc/4.jpg",
@@ -189,6 +186,7 @@ $(document).ready(function () {
     "assets/imagess/concept/tetnc/6.jpg",
     "assets/imagess/concept/tetnc/7.jpg",
     "assets/imagess/concept/tetnc/8.jpg",
+    "assets/imagess/concept/tetnc/23.jpg",
     "assets/imagess/concept/tetnc/9.jpg",
     "assets/imagess/concept/tetnc/10.jpg",
     "assets/imagess/concept/tetnc/11.jpg",
@@ -202,6 +200,8 @@ $(document).ready(function () {
     "assets/imagess/concept/tetnc/19.jpg",
     "assets/imagess/concept/tetnc/20.jpg",
     "assets/imagess/concept/tetnc/21.jpg",
+    "assets/imagess/concept/tetnc/22.jpg",
+    "assets/imagess/concept/tetnc/1.jpg",
   ];
 
   const allImagesCouple = [

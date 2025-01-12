@@ -23,7 +23,7 @@
 		<title>SL Studio</title>
 
 		<!-- For favicon jpg -->
-		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.jpg" />
+		<link rel="shortcut icon" type="image/icon" href="assetss/logo/favicon.png" />
 
 		<!--font-awesome.min.css-->
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -134,7 +134,8 @@
 					<p style="font-size: x-large;">
 						Đăng kí ngày để nhận ưu đãi tới 500k
 					</p>
-					<button class="welcome-btn" onclick="window.location.href='#register'">ĐK
+					<button class="welcome-btn" onclick="window.location.href='#register'">Đăng
+						kí
 						tư vấn
 					</button>
 				</div>
@@ -183,28 +184,13 @@
 									</div>
 									<div class="col-md-6 col-sm-12 col-xs-6">
 										<div class="new-cars-img">
-											<img src="assets/imagess/newConcept/ncm1.jpg" alt="img" />
+											<img src="assets/imagess/newConcept/ncm3.jpg" alt="img" />
 										</div><!--/.new-cars-img-->
 									</div>
 								</div>
 							</div><!--/.single-new-cars-item-->
 						</div><!--/.new-cars-item-->
-						<div class="new-cars-item">
-							<div class="single-new-cars-item">
-								<div class="row">
-									<div class="col-md-6 col-sm-12 col-xs-6">
-										<div class="new-cars-img">
-											<img src="assets/imagess/newConcept/17.jpg" alt="img" />
-										</div><!--/.new-cars-img-->
-									</div>
-									<div class="col-md-6 col-sm-12 col-xs-6">
-										<div class="new-cars-img">
-											<img src="assets/imagess/newConcept/16.jpg" alt="img" />
-										</div><!--/.new-cars-img-->
-									</div>
-								</div>
-							</div><!--/.single-new-cars-item-->
-						</div>
+
 						<div class="new-cars-item">
 							<div class="single-new-cars-item">
 								<div class="row">
@@ -237,7 +223,22 @@
 								</div>
 							</div><!--/.single-new-cars-item-->
 						</div><!--/.new-cars-item-->
-
+						<div class="new-cars-item">
+							<div class="single-new-cars-item">
+								<div class="row">
+									<div class="col-md-6 col-sm-12 col-xs-6">
+										<div class="new-cars-img">
+											<img src="assets/imagess/newConcept/17.jpg" alt="img" />
+										</div><!--/.new-cars-img-->
+									</div>
+									<div class="col-md-6 col-sm-12 col-xs-6">
+										<div class="new-cars-img">
+											<img src="assets/imagess/newConcept/16.jpg" alt="img" />
+										</div><!--/.new-cars-img-->
+									</div>
+								</div>
+							</div><!--/.single-new-cars-item-->
+						</div>
 					</div><!--/#new-cars-carousel-->
 				</div><!--/.new-cars-content-->
 
@@ -345,73 +346,63 @@
 
 		<!-- register end -->
 
-		<section id="register" class="register">
+		<!-- loading -->
+		<section id="register" class="register" style="position: relative;">
+			<div id="loading-overlay" style="display: none;">
+				<div class="spinner"></div>
+			</div>
 			<div class="container">
 				<div class="section-header">
 					<h2>Đăng kí tư vấn</h2>
-				</div><!--/.section-header-->
+				</div>
 				<div class="row"
 					style="padding: 40px 0 40px; display: flex; justify-content: center;">
-					<!-- <div class="col-lg-6 img-register" style="padding: 0;">
-						<div class="model-search-content">
-							<img src alt>
-						</div>
-					</div> -->
-					<div class="col-lg-6" style="padding: 0;">
+					<div class="col-lg-6 col-sm-12" style="padding: 0;">
 						<div class="model-search-content">
 							<div class="row" style="margin: 25px;">
-
 								<div class="single-model-search">
 									<h2>Concept</h2>
 									<div class="model-select-icon">
 										<select class="form-control">
-
-											<!-- <option value="tetnc">Tết ngoại cảnh</option> -->
 											<option value="tet">Tết</option>
 											<option value="sinhnhat">Sinh nhật</option>
 											<option value="couple">Couple</option>
-											<option value="couple">Profile</option>
-											<!-- <option value="ngoaicanh">Beauty</option> -->
+											<option value="profile">Profile</option>
 											<option value="nangther">Nàng thơ</option>
-											<!-- <option value="giangsinh">Giáng sinh</option> -->
-											<!-- <option value="haloween">Haloween</option> -->
 											<option value="khac">Khác</option>
-										</select><!-- /.select-->
-									</div><!-- /.model-select-icon -->
+										</select>
+									</div>
 								</div>
 								<div class="single-model-search">
 									<h2>Họ và tên</h2>
 									<div class="model-input-icon">
-										<input class="form-control" name="fullName" />
+										<input class="form-control" name="fullname"
+											placeholder="Nguyễn Văn A" />
 									</div>
 								</div>
-
 								<div class="single-model-search">
 									<h2>Số điện thoại</h2>
 									<div class="model-input-icon">
-										<input class="form-control" name="phone" />
+										<input class="form-control" name="phone" placeholder="0123456789" />
 									</div>
 								</div>
 								<div class="single-model-search">
 									<h2>Ngày giờ</h2>
 									<div class="model-input-icon">
-										<input class="form-control" name="date" />
+										<input class="form-control" name="time" placeholder="8h30 - 12/1" />
 									</div>
 								</div>
-
 							</div>
 							<div class="row">
 								<div class="single-model-search text-center">
-									<button id="registerBtn" class="welcome-btn model-search-btn">
-										Đăng Kí
-									</button>
+									<button id="registerBtn" class="welcome-btn model-search-btn">Đăng
+										Kí</button>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
 		</section>
 
 		<!--/.clients-say start-->
@@ -502,24 +493,32 @@
 			<div class="container">
 				<div class="footer-top">
 					<div class="row" ">
-						<div class="col-md-6 col-sm-6">
+						<div class="col-md-6 col-sm-12">
 							<a href="#concept">
 								<div class="single-footer-widget">
 									<div class="footer-logo">
 										<a href="index.html">sl studio</a>
 									</div>
-									<div>
+									<div class="info-studio">
 										<i class="fa-solid fa-phone"> </i>
 										<a href="tel:0985162202">Hotline 1: 0985.16.2202</a>
 									</div>
-									<div>
+									<div class="info-studio">
 										<i class="fa-solid fa-phone"></i>
 										<a href="tel:0352335336">Hotline 2: 0352.335.336</a>
+									</div>
+									<div
+										class="info-studio">
+										<i class="fa-solid fa-map-location-dot"></i>
+										<a href="#" style="text-decoration: none;">Số 9, Ngách
+											69, Ngõ 460, Phố Khương Đình, Phường Khương Hạ, Thanh Xuân, Hà Nội
+											(Hoặc ngõ 171 Nguyễn Xiển)(Có chỗ để ô
+											tô)</a>
 									</div>
 								</div>
 							</a>
 						</div>
-						<div class="col-md-6 col-sm-6" style="text-align: end;">
+						<div class="col-md-6 col-sm-12" style="text-align: end;">
 							<div class="single-footer-widget">
 								<!-- <h2>fanpage chúng tôi</h2> -->
 								<div class="fb-page" data-href="https://www.facebook.com/slstudio.vn"
@@ -574,7 +573,13 @@
 						src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000"
 						alt="Phone">
 				</a>
-				<a href="https://zalo.me/0123456789" target="_blank"
+				<a href="https://m.me/132338993289706" target="_blank"
+					class="button fb-button">
+					<img
+						src="https://img.icons8.com/?size=100&id=YFbzdUk7Q3F8&format=png&color=000000"
+						alt="Messenger">
+				</a>
+				<a href="https://zalo.me/" target="_blank"
 					class="button zalo-button">
 					<img
 						src="https://img.icons8.com/?size=100&id=0m71tmRjlxEe&format=png&color=000000"
