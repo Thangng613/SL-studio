@@ -23,7 +23,8 @@
 		<title>SL Studio</title>
 
 		<!-- For favicon jpg -->
-		<link rel="shortcut icon" type="image/icon" href="assetss/logo/favicon.png" />
+		<link rel="shortcut icon" type="image/icon"
+			href="assetss/imagess/logo/favicon.png" />
 
 		<!--font-awesome.min.css-->
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -395,7 +396,7 @@
 						<div class="model-search-content">
 							<div class="row" style="margin: 25px;">
 								<div class="single-model-search">
-									<h2>Concept</h2>
+									<h2><span class="red-asterisk">*</span>Concept</h2>
 									<div class="model-select-icon">
 										<select class="form-control">
 											<option value="tet">Tết</option>
@@ -406,24 +407,28 @@
 											<option value="khac">Khác</option>
 										</select>
 									</div>
+									<p class="error-concept">Chưa chọn concept</p>
 								</div>
 								<div class="single-model-search">
-									<h2>Họ và tên</h2>
+									<h2><span class="red-asterisk">*</span>Họ và tên</h2>
 									<div class="model-input-icon">
 										<input class="form-control" name="fullname"
 											placeholder="Nguyễn Văn A" />
+										<p class="error-name">Chưa nhập họ tên</p>
 									</div>
 								</div>
 								<div class="single-model-search">
-									<h2>Số điện thoại</h2>
+									<h2><span class="red-asterisk">*</span>Số điện thoại</h2>
 									<div class="model-input-icon">
 										<input class="form-control" name="phone" placeholder="0123456789" />
+										<p class="error-phone">Chưa nhập số điện thoại</p>
 									</div>
 								</div>
 								<div class="single-model-search">
-									<h2>Ngày giờ</h2>
+									<h2><span class="red-asterisk">*</span>Ngày giờ</h2>
 									<div class="model-input-icon">
 										<input class="form-control" name="time" placeholder="8h30 - 12/1" />
+										<p class="error-time">Chưa nhập ngày giờ</p>
 									</div>
 								</div>
 							</div>

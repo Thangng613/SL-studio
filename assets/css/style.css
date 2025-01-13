@@ -296,6 +296,7 @@ nav.navbar.bootsnav .navbar-toggle i {
 .welcome-hero-txt {
   text-align: center;
   padding: 290px 0 372px;
+  position: relative;
 }
 .welcome-hero-txt h2 {
   font-size: 42px;
@@ -1100,6 +1101,7 @@ custom
   font-weight: 300;
   text-transform: none;
   margin: 0;
+  max-width: 100% !important;
 }
 
 /* Loading */
@@ -1139,4 +1141,19 @@ h3 {
 
 .voucher .row {
   padding: 96px 0;
+}
+
+/* css error */
+.error-concept,
+.error-name,
+.error-phone,
+.error-time {
+  color: #ed4343;
+  font-size: 14px;
+  padding: 10px 10px 0;
+  display: none;
+}
+
+.red-asterisk {
+  color: #ed4343;
 }

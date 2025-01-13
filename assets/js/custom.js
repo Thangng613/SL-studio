@@ -16,10 +16,29 @@ $(document).ready(function () {
       time,
     };
     const loadingOverlay = document.getElementById("loading-overlay");
-    if (!concept || !fullname || !phone || !time) {
-      alert("Vui lòng điền đầy đủ thông tin!");
-      return;
-    } else {
+    const fields = [
+      { input: "fullname", error: ".error-name" },
+      { input: "phone", error: ".error-phone" },
+      { input: "time", error: ".error-time" },
+    ];
+
+    let isValid = true;
+
+    fields.forEach((field) => {
+      const inputElement = document.querySelector(
+        `input[name="${field.input}"]`
+      );
+      const errorElement = document.querySelector(field.error);
+
+      if (!inputElement.value.trim()) {
+        errorElement.style.display = "block";
+        isValid = false;
+      } else {
+        errorElement.style.display = "none";
+      }
+    });
+
+    if (isValid) {
       try {
         loadingOverlay.style.display = "flex";
         fetch("https://sl-studio-be.onrender.com/register", {
@@ -78,23 +97,23 @@ $(document).ready(function () {
 
   // 2. welcome animation support
 
-  $(window).load(function () {
-    $(".welcome-hero-txt h2,.welcome-hero-txt p")
-      .removeClass("animated fadeInUp")
-      .css({ opacity: "0" });
-    $(".welcome-hero-txt button")
-      .removeClass("animated fadeInDown")
-      .css({ opacity: "0" });
-  });
+  // $(window).load(function () {
+  //   $(".welcome-hero-txt h2,.welcome-hero-txt p")
+  //     .removeClass("animated fadeInUp")
+  //     .css({ opacity: "0" });
+  //   $(".welcome-hero-txt button")
+  //     .removeClass("animated fadeInDown")
+  //     .css({ opacity: "0" });
+  // });
 
-  $(window).load(function () {
-    $(".welcome-hero-txt h2,.welcome-hero-txt p")
-      .addClass("animated fadeInUp")
-      .css({ opacity: "0" });
-    $(".welcome-hero-txt button")
-      .addClass("animated fadeInDown")
-      .css({ opacity: "0" });
-  });
+  // $(window).load(function () {
+  //   $(".welcome-hero-txt h2,.welcome-hero-txt p")
+  //     .addClass("animated fadeInUp")
+  //     .css({ opacity: "0" });
+  //   $(".welcome-hero-txt button")
+  //     .addClass("animated fadeInDown")
+  //     .css({ opacity: "0" });
+  // });
 
   // 3. owl carousel
 
